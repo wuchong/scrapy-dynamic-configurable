@@ -1,4 +1,4 @@
-# Scrapy Dynamic Demo
+# Scrapy Dynamic Configurable
 
 A dynamic configurable news crawler based Scrapy. See the [blogs](http://wuchong.me/blog/2015/05/22/running-scrapy-programmatically) for more detail.
 
