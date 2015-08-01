@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import scrapy
-from scrapy.contrib.spiders import CrawlSpider, Rule
-from scrapy.contrib.linkextractors import LinkExtractor
+from scrapy.spiders import CrawlSpider, Rule
+from scrapy.linkextractors import LinkExtractor
 
 class Article(scrapy.Item):
     title = scrapy.Field()

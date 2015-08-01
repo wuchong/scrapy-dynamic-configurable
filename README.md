@@ -31,3 +31,5 @@ $ pip install redis
 ```
 **and restore datatables from 'db.sql'**
 
+It is for scrapy 1.0 .
+It is for scrapy 1.0 .
