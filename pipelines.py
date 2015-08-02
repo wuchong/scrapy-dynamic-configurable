@@ -11,11 +11,9 @@ from model.article import Article
 class DuplicatesPipeline(object):
     def process_item(self, item, spider):
         if Redis.exists('url:%s' % item['url']):
-            print 'aaaaaaaaaaaaaa'
             raise DropItem("Duplicate item found: %s" % item)
         else:
             Redis.set('url:%s' % item['url'],1)
-            print 'bbbbbbbbbbbbb'
             return item
 
 # 存储到数据库
@@ -31,7 +29,6 @@ class DataBasePipeline(object):
                     source_site=item["source_site"].encode("utf-8"))
         self.session.add(a)
         self.session.commit()
-        print 'ccccccccccc'
 
     def close_spider(self,spider):
         self.session.close()
