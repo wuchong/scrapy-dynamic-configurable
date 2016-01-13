@@ -21,4 +21,4 @@ db = DBSession()
 rules = db.query(Rule).filter(Rule.enable == 1)
 for rule in rules:
     process.crawl(DeepSpider,rule)
-    process.start()
+process.start()
